@@ -1,0 +1,30 @@
+.mainFooter {
+  background-color: $brand-color;
+  color: $white;
+  font-size: 0.9em;
+  text-transform: lowercase;
+  padding: 1.5em 1em 1em 1em;
+  margin: 0;
+  text-align: center;
+  & .navigation__list {
+    text-transform: lowercase;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+    font-size: 0.8em;
+    @media (min-width: $medium-screen) {
+      font-size: 0.9em;
+    }
+  }
+  & .navigation__link {
+    margin: 0 0.6em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  & .navigation__item {
+    display: inline;
+  }
+  @media (min-width: $medium-screen) {
+    font-size: 1em;
+  }
+}

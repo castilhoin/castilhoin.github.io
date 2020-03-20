@@ -1,0 +1,105 @@
+.pageBox {
+  margin-top: 8.5em;
+  background: $white;
+  @include shadow();
+}
+.pageHeader {
+  padding: 1em;
+  @media (min-width: $medium-screen) {
+    padding: 2em 4.5em 1em 4.5em;
+  }
+  @media (min-width: $large-screen) {
+    padding: 4em 8em 0 8em;
+  }
+  &__title {
+    font: {
+      family: $brand-font;
+      size: 1.8em;
+      weight: 700;
+    }
+    &::after {
+      content: '';
+      width: 60px;
+      height: 2px;
+      margin: 8px 0 0 0;
+      padding: 0;
+      background: $black;
+      position: absolute;
+      display: block;
+    }
+  }
+}
+.pageSection {
+  background: $white;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  @media (min-width: $medium-screen) {
+    padding: 2.5em 4.5em;
+  }
+  @media (min-width: $large-screen) {
+    padding: 4em 8em;
+  }
+  & h2, & h3, & h4, & h5, & h6 {
+    margin-bottom: 0.5em;
+    font: {
+      family: $brand-font;
+      weight: 700;
+    }
+  }
+  & h2 {
+    font-size: 1.6em;
+  }
+  & h4 {
+    font-size: 1.4em;
+  }
+  & h5 {
+    font-size: 1.2em;
+  }
+  & h6 {
+    font-size: 1em;
+  }
+  & p {
+    margin-bottom: 1.5em;
+    line-height: 1.4;
+  }
+  & img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 1.5em auto;
+    @media (min-width: $xlarge-screen) {
+      width: 500px;
+    }
+    &[src*="#my-profile"] {
+      /*
+      float: left;
+      margin: 0 1.5em 1.5em 0;
+      */
+      max-width: 300px;
+      @media (min-width: $medium-screen) {
+        float: left;
+        margin: 0 1.5em 1.5em 0;
+      }
+    }
+    &[class="icon-svg"] {
+      margin: 0.8em 0.8em 0 0;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    }
+  }
+  & ol {
+    list-style-type: square;
+    margin-left: 1em;
+    & li {
+      margin-bottom: 0.5em;
+    }
+  }
+  & a {
+    color: $blue;
+    &:hover {
+      color: $brand-color;
+      transition: color 0.5s ease-in-out;
+    }
+  }
+}
